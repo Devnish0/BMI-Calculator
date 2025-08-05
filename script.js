@@ -69,5 +69,12 @@ form.addEventListener("submit", (e) => {
 
   // Personal quotes
 });
-// const shame = document.querySelector("#shame");
-// shame.innerHTML = "nishank";
+//!Wallpaper changes
+const Wallpaper = ["first.jpg", "second.jpg", "third.jpg", "fourth.jpg"];
+
+const wallBtn = document.querySelector("#changeBackground");
+
+wallBtn.addEventListener("click", () => {
+  let randomNumber = Math.floor(Math.random() * Wallpaper.length);
+  document.body.style.backgroundImage = `url('Wallpaper/${Wallpaper[randomNumber]}')`;
+});
