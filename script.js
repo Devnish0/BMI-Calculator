@@ -49,7 +49,7 @@ form.addEventListener("submit", (e) => {
   }
   if (weight <= 10) {
     result.innerHTML =
-      "<h4>aap murgi to nahi?? <br> (please give a valid weight)</h4>";
+      "<h4>murgi ka BMI nahi bta sakta?? <br> (please give a valid weight)</h4>";
     result.style.color = "red";
     shame.innerHTML = "";
 
@@ -70,14 +70,14 @@ form.addEventListener("submit", (e) => {
 
   //? personal quotes
   if (output < 18.6) {
-    shame.innerHTML = "Bhai thoda khana peena shru krde <br> (under-weight)";
+    shame.innerHTML = "you need to eat more <br> (under-weight)";
     return;
   } else if (output >= 18.6 && output <= 24.9) {
     shame.innerHTML =
       "waah! ye body aapki asteroid se hai? <br> (normal-weight)";
     return;
   } else if (output > 24.9) {
-    shame.innerHTML = "Bhai thoda kam khaya karo <br> (obese)";
+    shame.innerHTML = "aap thode jada healthy ho!! <br> (obese)";
     return;
   }
 
