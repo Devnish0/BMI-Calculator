@@ -28,6 +28,8 @@ form.addEventListener("submit", (e) => {
   ) {
     result.innerHTML = "<h4>Please give a valid weight</h4>";
     result.style.color = "red";
+    shame.innerHTML = "";
+
     return;
   }
   //!making sure the inputs are valid
@@ -35,21 +37,28 @@ form.addEventListener("submit", (e) => {
     result.innerHTML =
       "<h4>aap to Chandra Bahadur Dangi se bhi chote ho <br> (please give a valid height)</h4>";
     result.style.color = "red";
+    shame.innerHTML = "";
+
     return;
   } else if (height >= 251) {
     result.innerHTML =
       "<h4>oh khali ke chacha batau abhi? <br> (please give a valid height)</h4>";
     result.style.color = "red";
+    shame.innerHTML = "";
     return;
   }
   if (weight <= 10) {
     result.innerHTML =
       "<h4>aap murgi to nahi?? <br> (please give a valid weight)</h4>";
     result.style.color = "red";
+    shame.innerHTML = "";
+
     return;
   } else if (weight >= 635) {
     result.innerHTML =
       "<h4>bhai teri gaadi ka BMI nikalna hai? <br> (please give a valid weight)</h4>";
+    shame.innerHTML = "";
+
     return;
   }
 
@@ -62,11 +71,14 @@ form.addEventListener("submit", (e) => {
   //? personal quotes
   if (output < 18.6) {
     shame.innerHTML = "Bhai thoda khana peena shru krde <br> (under-weight)";
+    return;
   } else if (output >= 18.6 && output <= 24.9) {
     shame.innerHTML =
       "waah! ye body aapki asteroid se hai? <br> (normal-weight)";
+    return;
   } else if (output > 24.9) {
     shame.innerHTML = "Bhai thoda kam khaya karo <br> (obese)";
+    return;
   }
 
   // Personal quotes
